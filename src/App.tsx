@@ -1,5 +1,6 @@
-import { Heading, MessageBox, Text } from './components';
+import { Heading, MessageBox, Profile, Text } from './components';
 import { MenuIcon } from './components/icons';
+import user1Image from './assets/user-1-image.webp';
 
 function App() {
   return (
@@ -31,6 +32,24 @@ function App() {
           message="Morning! It was pretty good. Went hiking on Saturday. You?"
           time="15.40"
           variant="received"
+        />
+      </div>
+
+      <div className="px-4 mt-10">
+        <Profile
+          profilePicture={user1Image}
+          name="Josh California"
+          lastMessage="I think top two are:"
+          unreadCount="3"
+        />
+
+        <Profile
+          profilePicture={user1Image}
+          name="Josh California"
+          lastMessage="I think top two are:"
+          unreadCount="3"
+          isActive={true}
+          isOnline={true}
         />
       </div>
     </>
