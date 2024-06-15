@@ -1,3 +1,7 @@
+import user1Image from '../assets/user-1-image.webp';
+import user2Image from '../assets/user-2-image.webp';
+import user3Image from '../assets/user-3-image.webp';
+
 export const data = [
   {
     userId: 'user1',
