@@ -1,4 +1,5 @@
-import { Heading, Text } from './components';
+import { Heading, MessageBox, Text } from './components';
+import { MenuIcon } from './components/icons';
 
 function App() {
   return (
@@ -16,6 +17,21 @@ function App() {
         <Text variant="black-three">
           Morning! It was pretty good. Went hiking on Saturday. You?
         </Text>
+
+        <MenuIcon />
+      </div>
+
+      <div className="mt-10">
+        <MessageBox
+          message="Hey, good morning! How was your weekend?"
+          time="15.40"
+        />
+
+        <MessageBox
+          message="Morning! It was pretty good. Went hiking on Saturday. You?"
+          time="15.40"
+          variant="received"
+        />
       </div>
     </>
   );
