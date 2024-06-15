@@ -7,6 +7,8 @@ export default {
         'secondary-black': '#222222',
         'black-500': '#303030',
         'primary-gray': '#8E8E93',
+        'light-yellow': '#DCF7C5',
+        'cream-white': '#FAFAFA',
       },
     },
   },
