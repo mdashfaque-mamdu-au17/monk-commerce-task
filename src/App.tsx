@@ -1,5 +1,17 @@
-import { Heading, MessageBox, Profile, Text } from './components';
-import { MenuIcon } from './components/icons';
+import {
+  Heading,
+  MessageBox,
+  Profile,
+  Text,
+  Button,
+} from './components';
+import {
+  AttachIcon,
+  CallIcon,
+  MenuIcon,
+  SendIcon,
+  VideoCallIcon,
+} from './components/icons';
 import user1Image from './assets/user-1-image.webp';
 
 function App() {
@@ -51,6 +63,28 @@ function App() {
           isActive={true}
           isOnline={true}
         />
+      </div>
+
+      <div className="flex gap-8 px-4 mt-10">
+        <Button>
+          <MenuIcon />
+        </Button>
+
+        <Button>
+          <CallIcon />
+        </Button>
+
+        <Button>
+          <VideoCallIcon />
+        </Button>
+
+        <Button className="!w-8 h-8">
+          <SendIcon />
+        </Button>
+
+        <Button variant="rounded">
+          <AttachIcon />
+        </Button>
       </div>
     </>
   );
