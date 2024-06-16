@@ -32,7 +32,7 @@ export default function Profile({
     profileComp = (
       <article
         className={classNames(
-          'p-2 rounded transition-all duration-300 hover:bg-light-gray flex justify-between gap-4 cursor-pointer',
+          'p-2 rounded hover:bg-light-gray transition-all duration-300 flex justify-between gap-4 cursor-pointer',
           isActive && 'bg-light-gray',
           className
         )}
