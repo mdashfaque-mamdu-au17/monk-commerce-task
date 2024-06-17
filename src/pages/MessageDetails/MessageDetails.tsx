@@ -46,7 +46,7 @@ export default function MessageDetails() {
 
       {/* messages */}
       {foundMessage?.userId && (
-        <div className="pt-[120px] pb-[80px] px-4 flex flex-col gap-2">
+        <div className="pt-[120px] pb-[80px] px-4 lg:pl-[80px] lg:pr-12 flex flex-col gap-2">
           {foundMessage?.chat?.map(
             (conversation: conversationProps, index: number) => {
               return (
