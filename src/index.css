@@ -7,3 +7,13 @@
 body {
   font-family: 'Inter', sans-serif;
 }
+
+@media screen and (min-width: 1024px) {
+  .custom-width {
+    width: calc(100% - 444px);
+  }
+
+  .custom-message-width {
+    width: calc(100% - 484px);
+  }
+}
