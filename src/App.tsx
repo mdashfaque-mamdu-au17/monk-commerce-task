@@ -1,92 +1,32 @@
 import {
-  Heading,
-  MessageBox,
-  Profile,
-  Text,
-  Button,
-} from './components';
-import {
-  AttachIcon,
-  CallIcon,
-  MenuIcon,
-  SendIcon,
-  VideoCallIcon,
-} from './components/icons';
-import user1Image from './assets/user-1-image.webp';
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
+import MainLayout from './pages/MainLayout/MainLayout';
+import MessageDetails from './pages/MessageDetails/MessageDetails';
+import MobileHome from './pages/MobileHome/MobileHome';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <MobileHome />,
+      },
+      {
+        path: '/message/:id',
+        element: <MessageDetails />,
+      },
+    ],
+  },
+]);
 function App() {
   return (
-    <>
-      <div className="bg-green-300">Hello world</div>
-      <Heading headingType="h1">Chats</Heading>
-      <Heading headingType="h3" variant="medium">
-        Josh California
-      </Heading>
-
-      <div className="mt-10">
-        <Text variant="gray">I think top two are:</Text>
-        <Text variant="black-one">Mark as unread</Text>
-        <Text variant="black-two">Click here for contact info</Text>
-        <Text variant="black-three">
-          Morning! It was pretty good. Went hiking on Saturday. You?
-        </Text>
-
-        <MenuIcon />
-      </div>
-
-      <div className="mt-10">
-        <MessageBox
-          message="Hey, good morning! How was your weekend?"
-          time="15.40"
-        />
-
-        <MessageBox
-          message="Morning! It was pretty good. Went hiking on Saturday. You?"
-          time="15.40"
-          variant="received"
-        />
-      </div>
-
-      <div className="px-4 mt-10">
-        <Profile
-          profilePicture={user1Image}
-          name="Josh California"
-          lastMessage="I think top two are:"
-          unreadCount="3"
-        />
-
-        <Profile
-          profilePicture={user1Image}
-          name="Josh California"
-          lastMessage="I think top two are:"
-          unreadCount="3"
-          isActive={true}
-          isOnline={true}
-        />
-      </div>
-
-      <div className="flex gap-8 px-4 mt-10">
-        <Button>
-          <MenuIcon />
-        </Button>
-
-        <Button>
-          <CallIcon />
-        </Button>
-
-        <Button>
-          <VideoCallIcon />
-        </Button>
-
-        <Button className="!w-8 h-8">
-          <SendIcon />
-        </Button>
-
-        <Button variant="rounded">
-          <AttachIcon />
-        </Button>
-      </div>
-    </>
+    <main>
+      <RouterProvider router={router} />
+    </main>
   );
 }
 
